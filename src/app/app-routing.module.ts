@@ -11,6 +11,7 @@ import { MealDetectionComponent } from "./components/meal-detection/meal-detecti
 import { ContactComponent } from "./components/contact/contact.component";
 import { AboutComponent } from "./components/about/about.component";
 import { UserProfileComponent } from "./components/user-profile/user-profile.component";
+import { NutritionInDetailComponent } from "./components/nutrition-in-detail/nutrition-in-detail.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" }, // Redirect to home by default
@@ -27,6 +28,7 @@ const routes: Routes = [
       { path: "user-info", component: UserInfoComponent },
       { path: "chatbot", component: ChatBotComponent },
       { path: "meal-detection", component: MealDetectionComponent },
+      { path: "nutrition-in-detail", component: NutritionInDetailComponent },
     ],
   },
   {path: "profile" , component:UserProfileComponent , canActivate: [AuthGuard]},

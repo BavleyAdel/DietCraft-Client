@@ -63,7 +63,7 @@ export class ServicesComponent implements OnInit {
           "Dietary deficiency alerts",
           "Personalized recommendations",
         ],
-        link:"/nutrition"
+        link:"/nutrition-in-detail"
       },
     ];
   }

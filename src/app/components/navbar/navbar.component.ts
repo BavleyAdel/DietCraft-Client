@@ -32,6 +32,8 @@ export class NavbarComponent {
     });
     this.loggingOut = this._userService.loggingOutSignal;
   }
+  // user = this._userService.getUserData;
+
   toggleMobileNav(): void {
     this.isActive = !this.isActive;
   }
