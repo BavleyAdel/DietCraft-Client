@@ -1,128 +1,190 @@
-.btn {
-  border-radius: 25px;
+:root {
+  --bg: #f8f9fc;
+  --primary: ;
+  --text: #343a40;
+  --card-bg: #fff;
+  --radius: 16px;
 }
 
-.new {
-  font-size: 12px;
+body {
+  background: #f8f9fc;
+  font-family: 'Poppins', sans-serif;
+  color: #343a40;
+  margin: 0;
+  padding: 0;
 }
 
-.card {
-  /* padding: 20px; */
-  border: none;
-  border: #495057 1px solid;
-  border-radius: 10px;
-  box-shadow: var(--heading-color) 1px 1px 20px 3px;
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
-.active {
-  background: #f6f7fb !important;
-  border-color: #f6f7fb !important;
-  color: #000 !important;
-  font-size: 12px;
+.text-center {
+  text-align: center;
 }
 
-.inputs {
-  position: relative;
+.icon-main {
+  font-size: 50px;
+  color: var(--accent-color);
 }
 
-.form-control {
-  text-indent: 15px;
-  border: none;
-  height: 45px;
-  border-radius: 0px;
-  border-bottom: 1px solid #eee;
+.main-title {
+  font-weight: 700;
+  font-size: 32px;
+  color: #343a40;
 }
 
-.form-control:focus {
-  color: #495057;
-  background-color: #fff;
-  border-color: #eee;
-  outline: 0;
-  box-shadow: none;
-  border-bottom: 1px solid blue;
+.subtitle {
+  font-size: 16px;
+  color: #6c757d;
 }
 
-.form-control:focus {
-  color: blue;
-}
-
-.inputs i {
-  position: absolute;
-  top: 14px;
-  left: 4px;
-  color: #b8b9bc;
-}
-
-.star {
-  height: 40px;
-  width: 40px;
+.search-wrapper {
   display: flex;
   justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.search-input {
+  width: 50%;
+  padding: 12px 20px;
+  border: 1px solid #ced4da;
+  border-radius: 16px;
+  font-size: 16px;
+}
+
+.btn {
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tag {
+  background: #e9ecef;
+  padding: 8px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tag.active {
+  background: var(--accent-color);
+  color: white;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.food-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.food-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.food-card .badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.food-card h4 {
+  margin: 12px 0 4px;
+  font-size: 20px;
+}
+
+.food-card .calories {
+  font-size: 18px;
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+.nutrition-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.nutrition-info .macro {
+  font-size: 14px;
+  display: flex;
   align-items: center;
-  background: #eee;
-  margin-right: 10px;
+  gap: 6px;
+}
+
+.protein {
+  color: var(--accent-color);
+}
+
+.carbs {
+  color: #f9a825;
+}
+
+.fat {
+  color: #ff7043;
+}
+
+.progress-section {
+  text-align: left;
+  margin-top: 12px;
+}
+
+.progress-bar {
+  background: #f1f1f1;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
   border-radius: 5px;
 }
 
-.time-text {
-  font-size: 12px;
-  color: #989898;
+.progress-fill.protein {
+  background: var(--accent-color);
 }
 
-.dots {
-  height: 7px;
-  width: 7px;
-  background-color: #eee;
-  display: flex;
-  border-radius: 50%;
-  margin-left: 7px;
-  margin-right: 7px;
-}
-
-.yellow {
-  color: #ffab2e;
-}
-
-.content-text-1 {
-  height: 40px;
-  width: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: #ffe7cc;
-  color: #ffa03a;
-  font-weight: 700;
-}
-
-.blue {
-  color: #6ecce6;
-}
-
-.content-text-2 {
-  height: 40px;
-  width: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: #e2f5fa;
-  color: #6ecce6;
-  font-weight: 700;
-}
-
-.dark-blue {
-  color: #572ce8;
-}
-
-.content-text-3 {
-  height: 40px;
-  width: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: #572ce86b;
-  color: #572ce8;
-  font-weight: 700;
+.progress-fill.fat {
+  background: #ff7043;
 }
